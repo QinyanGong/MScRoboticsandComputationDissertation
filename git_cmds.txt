@@ -1,0 +1,85 @@
+$ git config --global user.name "Qinyan Gong"
+
+$ git config --global user.email "qinyangong20@outlook.com"
+
+$ git config --global init.default branch main
+
+$ git config -h
+
+$ cd D:/UCL/MScRoboticsandComputationDissertation
+$ git init # Initialized empty Git repository in D:/UCL/MScRoboticsandComputationDissertation/.git/
+
+$ git status
+
+$ git add <file>
+
+$ git rm --cached <file>
+$ git rm --cached <folder> -r # removing files in the folder and the folder recursively with -r
+
+# add all repository
+$ git add .
+$ git add --all
+$ git add -A
+
+# commit with a message
+$ git commit -m "first commit - committing all files to the repository"
+
+# to see the differences with modified files
+$ git diff
+
+# git env: working files, staging, commit
+$ git add <file> # update from working files to staging
+$ git restore --staged <file> # restore from staging to work files
+
+# skip the state of staging and commit directly
+$ git commit -a -m "updated text to free range"
+
+# remove from git
+$ git rm "<file name>"
+
+# or delete directly from work files and then update with rm <file>
+# it can also be restored
+$ git restore "<file name>"
+
+# rename a file
+# git mv "<file name>" "<new file name>"
+
+# review commit
+$ git log
+# abbreviate version
+$ git log --oneline
+# view detailed changes and quit with "Q" on key board
+git log -p
+
+# change commit message
+$ git commit -m "......" --amend
+
+# all log func in git
+$ git help log
+
+# jump to previous commit
+$ git reset <commit tag>
+
+# modify commit, the history book
+$ git rebase -i --root
+
+# Branch
+git branch <new branch name>
+
+# check all branches we have
+$ git branch
+
+# switch to a branch
+$ git switch <branch name>
+# and then do some changes and commit to the new branch
+# the content in the main branch is not changed
+
+# switch to main and merge branch
+$ git switch main
+$ git merge -m "messages......" <branch name>
+
+# delete redundant branch
+$ git branch -d <branch name>
+
+# create and switch to a new branch
+$ git switch -c UpdateText
