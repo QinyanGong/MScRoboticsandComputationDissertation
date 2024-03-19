@@ -83,3 +83,6 @@ $ git branch -d <branch name>
 
 # create and switch to a new branch
 $ git switch -c UpdateText
+
+# push all branches to github
+# git push -all
