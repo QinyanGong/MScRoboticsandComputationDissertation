@@ -12,11 +12,10 @@
 &nbsp;
 ----------
 ###### Wednesday
-> - Try Nerf on Colab
-> - Training [Nerfacto](https://docs.nerf.studio/nerfology/methods/nerfacto.html) while check rendering from [Viewer](https://viewer.nerf.studio/)
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/8ea2b0c6-9112-4611-8eb7-f18ecb7fb431)
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/93482ed2-7874-4013-b8fc-7eb3dd5a6817)
-
+> - Learn Nerf methodologies
+> - Train [Nerfacto](https://docs.nerf.studio/nerfology/methods/nerfacto.html) on Colab with nerf studio demo codes, while checking rendering from [Viewer](https://viewer.nerf.studio/)
+<img src="nerfactotraining.png" alt="Nerfacto Training" width="600" height="325">
+<img src="nerfactotrainviewer.png" alt="Viewer for Nerfacto training" width="600" height="300">
 
 
 
