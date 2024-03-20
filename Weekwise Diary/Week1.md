@@ -8,6 +8,7 @@
 ----------
 ###### Tuesday
 > - Learn all basic git cmd
+> - Take notes in [git_cmds](../git_cmds.txt)
 &nbsp;
 ----------
 ###### Wednesday
