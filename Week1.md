@@ -21,4 +21,4 @@
 ###### Friday
 > - Weekly meeting with Baoru
 &nbsp;
-> ###### [Next Day](Week2.md)
+> ###### [Next Week](Week2.md)
