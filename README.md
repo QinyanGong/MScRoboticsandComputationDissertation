@@ -5,4 +5,4 @@ Rules:
 * Set goals in morning, report at end of day
 
 ### Weekwise Diary
-- [Week 1](Week1.md)
+- [Week 1](Weekwise Diary/Week1.md)
