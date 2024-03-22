@@ -23,6 +23,7 @@
 ----------
 ###### Thursday
 > - Read Nerf Doc
+> - Upload Colonoscopy 3D Video Dataset ([C3VD](https://durrlab.github.io/C3VD/)) to Colab and train.
 &nbsp;
 ----------
 ###### Friday
