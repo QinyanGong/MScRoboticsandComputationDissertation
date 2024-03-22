@@ -22,8 +22,44 @@
 &nbsp;
 ----------
 ###### Thursday
-> - Read Nerf Doc
-> - Upload Colonoscopy 3D Video Dataset ([C3VD](https://durrlab.github.io/C3VD/)) to Colab and train.
+> - Read Nerf Doc:
+
+  Methods:
+    Instant-NGP
+    Splatfacto
+    Nerf
+    Nerfacto
+
+  Model Components:
+  
+    Cameras models:
+      Perspective Camera Model
+      Fisheye Camera Model
+      Equirectangular/Spherical Camera Model
+      Distortion Parameters
+      
+    Sample representation:
+      3D Frustum
+      Representing Frustums as Points
+      Representing Frustums as Gaussians
+      
+    Ray samplers:
+      Stratified Sampling
+      Hierarchical Sampling
+      Spaced Samplers
+      Probability Distribution Function (PDF) Sampler
+      
+    Spatial distortions:
+      Scene Contraction with L2 or L infinity norm
+      
+    Encoders:
+      Random Fourier Feature (RFF) Encoding
+      Hash Encoding
+      Spherical Harmonic Encoding
+
+
+
+> - Upload Colonoscopy 3D Video Dataset ([C3VD](https://durrlab.github.io/C3VD/)) to Colab and train. (unfinished)
 &nbsp;
 ----------
 ###### Friday
