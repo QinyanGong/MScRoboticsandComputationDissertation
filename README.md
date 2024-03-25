@@ -6,3 +6,4 @@ Rules:
 
 ### Weekwise Diary
 - [Week 1](Weekwise%20Diary/Week1.md)
+- [Week 2](Weekwise%20Diary/Week2.md)
