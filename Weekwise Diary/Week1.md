@@ -57,12 +57,9 @@
       Hash Encoding
       Spherical Harmonic Encoding
 
-
-
-> - Upload Colonoscopy 3D Video Dataset ([C3VD](https://durrlab.github.io/C3VD/)) to Colab and train. (unfinished)
 &nbsp;
 ----------
 ###### Friday
-> - Weekly meeting with Baoru
+> - Upload Colonoscopy 3D Video Dataset ([C3VD](https://durrlab.github.io/C3VD/)) to Colab and train. (failed)
 &nbsp;
 > ###### [Next Week](Week2.md)
