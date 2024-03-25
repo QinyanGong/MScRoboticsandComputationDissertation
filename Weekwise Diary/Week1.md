@@ -61,5 +61,7 @@
 ----------
 ###### Friday
 > - Upload Colonoscopy 3D Video Dataset ([C3VD](https://durrlab.github.io/C3VD/)) to Colab and train. (failed)
+<img src="uploaded_num_images.png" alt="uploaded_num_images" width="900" height="325">
+<img src="trainning error.png" alt="uploaded_num_images" width="600" height="325">
 &nbsp;
 > ###### [Next Week](Week2.md)
