@@ -28,11 +28,8 @@ Steps in Colmap:
 &nbsp;
 ----------
 ###### Wednesday
-
 ----------
 ###### Thursday
-> - Train with Colmap output data
-&nbsp;
 ----------
 ###### Friday
 > - Weekly meeting with Baoru
