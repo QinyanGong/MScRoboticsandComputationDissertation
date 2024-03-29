@@ -25,6 +25,7 @@ Steps in Colmap:
      - database
      - sparse
        - 0
+<img src="cecum_t1_b_model.png" alt="cecum_t1_b_model" width="900" height="325">
 &nbsp;
 ----------
 ###### Wednesday
