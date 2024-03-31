@@ -85,4 +85,7 @@ $ git branch -d <branch name>
 $ git switch -c UpdateText
 
 # push all branches to github
-# git push -all
+$ git push -all
+
+# push a new branch to github
+$ git push origin <new branch>
