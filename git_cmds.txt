@@ -89,3 +89,10 @@ $ git push -all
 
 # push a new branch to github
 $ git push origin <new branch>
+
+
+git remote set-url origin git@github.com:alstondu/cw3_team10.git
+git remote -v
+
+eval "$(ssh-agent -s)"
+ssh-add qinyangongsshkey 
