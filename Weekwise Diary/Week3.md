@@ -6,7 +6,7 @@
 > - Try Nerf Colab code from AI-Kui
 &nbsp;
 ----------
-###### Tuesday
+###### Tuesday-Thursday
 > - Review 3d Gaussian Splatting:
 
 - [3D Gaussian Splatting 原理略解](https://zhuanlan.zhihu.com/p/675326584) from Zhihu;
@@ -30,10 +30,6 @@
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/c62b79de-dc8a-4ca3-9b27-2fd1b14effbd)
 
 &nbsp;
-----------
-###### Wednesday
-----------
-###### Thursday
 ----------
 ###### Friday
 ----------
