@@ -14,7 +14,7 @@ Efficient 3D Mesh Reconstruction and High-Quality Mesh Rendering](https://arxiv.
 &nbsp;
 ----------
 ###### Thursday
-> - Read the method of SuGaR
+> - Read the method and experiment parts of SuGaR
 ----------
 ###### Friday
 ----------
