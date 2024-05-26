@@ -17,7 +17,11 @@
   <img src="aikui nerf C3VD 6-9 Epoch 256 batchsize 4096 data.png" alt="aikui nerf C3VD 6-9 Epoch 256 batchsize 4096 data" width="500" height="325">
 
   Finish 10-epoch training, but run out of capacity when post-processing.
-  Still have problems on model saving.
+  
+  ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/790eb47e-7a5a-4d51-b13d-93d6ac6030bf)
+
+  Finish 4-epoch training, but still have problems on model saving.
+
 
 &nbsp;
 ----------
