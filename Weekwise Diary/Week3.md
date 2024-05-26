@@ -1,5 +1,5 @@
 ----------
-###### Title: 2024 Robotics and Computation Dissertation - Week 1
+###### Title: 2024 Robotics and Computation Dissertation - Week 3
 ###### Date: 08-04-2024 -- 14-04-2024
 ----------
 ###### Monday
