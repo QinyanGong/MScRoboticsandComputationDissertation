@@ -6,7 +6,11 @@
 ###### Monday
 - Run Colmap and [Zoomlab Code](https://github.com/superrice2020/ZoomLab_NeRF) to get poses_bounds.npy for nerf training
 
-- Modify AIKui's [nerf code](https://github.com/kwea123/nerf_pl) on Github to train C3VD
+- Modify AIKui's [nerf code](https://github.com/kwea123/nerf_pl) on Github to train C3VD:
+  1. clone the repository
+  2. change the ["requirements"](requirements.txt)
+  3. change the ["train.py"](train.py)
+  4. run the codes
 
   <img src="aikui nerf C3VD 0-6 Epoch 256 batchsize 4096 data.png" alt="aikui nerf C3VD 0-6 Epoch 256 batchsize 4096 data" width="300" height="325">
 
