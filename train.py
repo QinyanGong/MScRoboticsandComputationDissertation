@@ -2,9 +2,8 @@ import os
 from opt import get_opts
 import torch
 from collections import defaultdict
-
-from torch.utils.data import Subset
-from torch.utils.data import DataLoader
+import numpy as np
+from torch.utils.data import DataLoader, Subset
 from datasets import dataset_dict
 
 # models
@@ -21,8 +20,7 @@ from losses import loss_dict
 from metrics import *
 
 # pytorch-lightning
-from pytorch_lightning.callbacks import ModelCheckpoint
-from pytorch_lightning.callbacks import EarlyStopping
+from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning import LightningModule, Trainer
 from pytorch_lightning.loggers import TestTubeLogger
 from pytorch_lightning.profiler import PyTorchProfiler
@@ -31,7 +29,6 @@ class NeRFSystem(LightningModule):
     def __init__(self, hparams):
         super(NeRFSystem, self).__init__()
         self.save_hyperparameters(hparams)
-        # self.hparams = hparams
 
         self.loss = loss_dict[hparams.loss_type]()
 
@@ -55,17 +52,18 @@ class NeRFSystem(LightningModule):
         B = rays.shape[0]
         results = defaultdict(list)
         for i in range(0, B, self.hparams.chunk):
-            rendered_ray_chunks = \
-                render_rays(self.models,
-                            self.embeddings,
-                            rays[i:i+self.hparams.chunk],
-                            self.hparams.N_samples,
-                            self.hparams.use_disp,
-                            self.hparams.perturb,
-                            self.hparams.noise_std,
-                            self.hparams.N_importance,
-                            self.hparams.chunk, # chunk size is effective in val mode
-                            self.train_dataset.white_back)
+            rendered_ray_chunks = render_rays(
+                self.models,
+                self.embeddings,
+                rays[i:i+self.hparams.chunk],
+                self.hparams.N_samples,
+                self.hparams.use_disp,
+                self.hparams.perturb,
+                self.hparams.noise_std,
+                self.hparams.N_importance,
+                self.hparams.chunk, # chunk size is effective in val mode
+                self.train_dataset.dataset.white_back
+            )
 
             for k, v in rendered_ray_chunks.items():
                 results[k] += [v]
@@ -90,7 +88,7 @@ class NeRFSystem(LightningModule):
         self.train_dataset = Subset(self.train_dataset, train_indices)
 
         # Manually add attributes to the subset
-        self.train_dataset.white_back = self.train_dataset.dataset.white_back
+        self.train_dataset.dataset.white_back = self.train_dataset.dataset.white_back
 
     def configure_optimizers(self):
         self.optimizer = get_optimizer(self.hparams, self.models)
@@ -123,19 +121,24 @@ class NeRFSystem(LightningModule):
             psnr_ = psnr(results[f'rgb_{typ}'], rgbs)
             log['train/psnr'] = psnr_
 
-        return {'loss': loss,
-                'progress_bar': {'train_psnr': psnr_},
-                'log': log
-               }
+        self.log('train/loss', loss)
+        self.log('train/psnr', psnr_)
+
+        return {'loss': loss, 'progress_bar': {'train_psnr': psnr_}, 'log': log}
 
     def validation_step(self, batch, batch_nb):
         rays, rgbs = self.decode_batch(batch)
         rays = rays.squeeze() # (H*W, 3)
         rgbs = rgbs.squeeze() # (H*W, 3)
         results = self(rays)
-        log = {'val_loss': self.loss(results, rgbs)}
+        loss = self.loss(results, rgbs)
+        
+        self.log('val/loss', loss, on_epoch=True, prog_bar=True)
+        
         typ = 'fine' if 'rgb_fine' in results else 'coarse'
-    
+        psnr_value = psnr(results[f'rgb_{typ}'], rgbs)
+        self.log('val/psnr', psnr_value, on_epoch=True, prog_bar=True)
+        
         if batch_nb == 0:
             W, H = self.hparams.img_wh
             img = results[f'rgb_{typ}'].view(H, W, 3).cpu()
@@ -143,34 +146,36 @@ class NeRFSystem(LightningModule):
             img_gt = rgbs.view(H, W, 3).permute(2, 0, 1).cpu() # (3, H, W)
             depth = visualize_depth(results[f'depth_{typ}'].view(H, W)) # (3, H, W)
             stack = torch.stack([img_gt, img, depth]) # (3, 3, H, W)
-            self.logger.experiment.add_images('val/GT_pred_depth',
-                                               stack, self.global_step)
+            self.logger.experiment.add_images('val/GT_pred_depth', stack, self.global_step)
 
-        log['val_psnr'] = psnr(results[f'rgb_{typ}'], rgbs)
-        return log
+        return {'val_loss': loss, 'val_psnr': psnr_value}
 
     def validation_epoch_end(self, outputs):
         mean_loss = torch.stack([x['val_loss'] for x in outputs]).mean()
         mean_psnr = torch.stack([x['val_psnr'] for x in outputs]).mean()
 
-        return {'progress_bar': {'val_loss': mean_loss,
-                                 'val_psnr': mean_psnr},
-                'log': {'val/loss': mean_loss,
-                        'val/psnr': mean_psnr}
-               }
+        self.log('val/loss', mean_loss, on_epoch=True, prog_bar=True)
+        self.log('val/psnr', mean_psnr, on_epoch=True, prog_bar=True)
+
+        return {
+            'progress_bar': {'val/loss': mean_loss, 'val/psnr': mean_psnr},
+            'log': {'val/loss': mean_loss, 'val/psnr': mean_psnr}
+        }
+
     def lr_scheduler_step(self, scheduler, optimizer_idx, monitor_val=None):
         scheduler.step()
-
 
 if __name__ == '__main__':
     hparams = get_opts()
     system = NeRFSystem(hparams)
-    
-    checkpoint_callback = ModelCheckpoint(dirpath=os.path.join(f'ckpts/{hparams.exp_name}',
-                                                                '{epoch:d}'),
-                                          monitor='val/loss',
-                                          mode='min',
-                                          save_top_k=5,)
+
+    checkpoint_callback = ModelCheckpoint(
+        dirpath='/content/drive/MyDrive/nerf_checkpoints',  # Google Drive path
+        filename='{epoch:02d}',
+        monitor='val/loss',
+        mode='min',
+        save_top_k=1,
+    )
 
     logger = TestTubeLogger(
         save_dir="logs",
@@ -180,28 +185,25 @@ if __name__ == '__main__':
     )
 
     early_stop_callback = EarlyStopping(
-        monitor=None,
+        monitor='val/loss',
         min_delta=0.0,
         patience=3,
         verbose=True,
         mode='min'
     )
 
-
-    trainer = Trainer(max_epochs=hparams.num_epochs, 
-              # callbacks=[early_stop_callback],
-              checkpoint_callback=checkpoint_callback,
-              resume_from_checkpoint=hparams.ckpt_path,
-              logger=logger,
-              weights_summary=None,
-              progress_bar_refresh_rate=1,
-              gpus=hparams.num_gpus,
-              # distributed_backend='ddp' if hparams.num_gpus>1 else None,
-              strategy='ddp' if hparams.num_gpus>1 else None,
-              num_sanity_val_steps=1,
-              benchmark=True,
-              profiler=PyTorchProfiler()
-              # profiler=hparams.num_gpus==1
-              )
+    trainer = Trainer(
+        max_epochs=hparams.num_epochs,
+        callbacks=[early_stop_callback, checkpoint_callback],
+        resume_from_checkpoint=hparams.ckpt_path,
+        logger=logger,
+        weights_summary=None,
+        progress_bar_refresh_rate=1,
+        gpus=hparams.num_gpus,
+        strategy='ddp' if hparams.num_gpus > 1 else None,
+        num_sanity_val_steps=1,
+        benchmark=True,
+        profiler=PyTorchProfiler()
+    )
 
     trainer.fit(system)
