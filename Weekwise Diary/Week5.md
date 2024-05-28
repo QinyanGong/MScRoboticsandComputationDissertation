@@ -31,6 +31,7 @@
  <img src="C3VD testing output 00.png" alt="C3VD testing output 00" width="300" height="240">
  <img src="C3VD.gif" width="250" height="250"/>
   The output is very weird, perhaps because the dataset used for training is too small.
+  
 &nbsp;
 ----------
 ###### Thursday
