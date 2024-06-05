@@ -26,7 +26,9 @@
 ----------
 ###### Tuesday
 - Modify ["train.py"](../train.py): previous code have failed to callback, so impossible to save the checkpoints.
+  
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/99055d18-ef23-4481-bb5f-a3165b845c90)
+
 - Run the testing steps and generate a .gif file and a sequence of images in nerf_pl/results/llff/$SCENE
  <img src="C3VD testing output 00.png" alt="C3VD testing output 00" width="300" height="240">
  <img src="C3VD.gif" width="250" height="250"/>
