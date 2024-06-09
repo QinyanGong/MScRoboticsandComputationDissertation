@@ -11,6 +11,7 @@ Exit at 11th epoch
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/bb1f5e2d-16f1-42ef-b114-cbd9ad0ea7dc)
 
 The result is still abnormal with more data and epochs' training.
+
  <img src="C3VD-20 epoch-20480 rand dataset.gif" width="250" height="250"/>
 
 &nbsp;
