@@ -10,3 +10,4 @@ Rules:
 - [Week 3](Weekwise%20Diary/Week3.md)
 - [Week 4](Weekwise%20Diary/Week4.md)
 - [Week 5](Weekwise%20Diary/Week5.md)
+- [Week 6](Weekwise%20Diary/Week6.md)
