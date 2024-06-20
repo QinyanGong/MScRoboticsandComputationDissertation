@@ -3,7 +3,7 @@
 ###### Title: 2024 Robotics and Computation Dissertation - Week 6
 ###### Date: 17-06-2024 -- 21-06-2024
 ----------
-###### Monday
+###### Monday-Tuesday
 #### Nerfstudio configuration on computer from start
 
 ##### Create environment
@@ -157,12 +157,127 @@ sudo apt update && sudo apt upgrade
 sudo apt install ffmpeg
 ffmpeg -version
 ```
-#### Run nerf in nerfstudio
+#### Run nerf in nerfstudio (Turtle)
 ```ruby
 # Process data
 ns-process-data images --data /home/wangzican/data/turtles/raw_images --output-dir /home/wangzican/data/turtles
 # train data
 ns-train nerfacto --data /home/wangzican/data/turtles
+```
+Successfully train nerfacto
+
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/f000aa9c-dae7-4a48-af27-0148ca657792)
+
+##### Wednesday
+
+#### Train Vanilla-Nerf locally (Turtle)
+
+Configuration:
+
+```ruby
+       model=VanillaModelConfig(
+            _target=<class 'nerfstudio.models.vanilla_nerf.NeRFModel'>,
+            enable_collider=True,
+            collider_params={'near_plane': 2.0, 'far_plane': 6.0},
+            loss_coefficients={'rgb_loss_coarse': 1.0, 'rgb_loss_fine': 1.0},
+            eval_num_rays_per_chunk=4096,
+            prompt=None,
+            num_coarse_samples=64,
+            num_importance_samples=128,
+            enable_temporal_distortion=False,
+            temporal_distortion_params={'kind': <TemporalDistortionKind.DNERF: 'dnerf'>},
+            use_gradient_scaling=False,
+            background_color='white'
+        )
+    ),
+    optimizers={
+        'fields': {
+            'optimizer': RAdamOptimizerConfig(
+                _target=<class 'torch.optim.radam.RAdam'>,
+                lr=0.0005,
+                eps=1e-08,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': None
+        },
+        'temporal_distortion': {
+            'optimizer': RAdamOptimizerConfig(
+                _target=<class 'torch.optim.radam.RAdam'>,
+                lr=0.0005,
+                eps=1e-08,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': None
+        }
+    },
+    vis='wandb',
+    data=PosixPath('/home/wangzican/data/turtles'),
+    prompt=None,
+    relative_model_dir=PosixPath('nerfstudio_models'),
+    load_scheduler=True,
+    steps_per_save=1000,
+    steps_per_eval_batch=500,
+    steps_per_eval_image=500,
+    steps_per_eval_all_images=25000,
+    max_num_iterations=1000000,
+    mixed_precision=False,
+    use_grad_scaler=False,
+    save_only_latest_checkpoint=True,
+    load_dir=PosixPath('/home/wangzican/outputs/turtles/vanilla-nerf/2024-06-19_160048/nerfstudio_models'),
+    load_step=None,
+    load_config=None,
+    load_checkpoint=None,
+    log_gradients=False,
+    gradient_accumulation_steps={}
+```
+##### Run Summary
+
+<img src="vanilla-turtle-run-summary.png" alt="vanilla-turtle-run-summary" width="600" height="395">
+
+##### Train Loss & Evaluation Loss(W&B)
+It stopped training abruptly the first time, so reload checkpoint from outputs/turtles/vanilla-nerf/2024-06-19_160048/nerfstudio_models, which ran 5000 steps.
+
+<img src="vanilla-turtle-train-loss.png" alt="vanilla-turtle-train-loss" width="800" height="400">
+
+<img src="vanilla-turtle-eval-loss.png" alt="vanilla-turtle-eval-loss" width="390" height="380">
+
+Fail to train vanilla nerf
+
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/e5587a14-ae9f-4674-9bb0-c1247ff2bad5)
+
+
+#### Train Gaussian Splatting on Colab
+``` ruby
+# train splatfacto
+! ns-train splatfacto \
+--output-dir /content/drive/MyDrive/outputs/splatfacto  \
+nerfstudio-data \
+--data /content/drive/MyDrive/nerfstudio/turtles/ \
+--downscale-factor 4
+
+# resume from checkpoints
+! ns-train splatfacto \
+--output-dir /content/drive/MyDrive/outputs/splatfacto\
+--load-dir /content/drive/MyDrive/outputs/splatfacto/unnamed/splatfacto/2024-06-20_000310/nerfstudio_models \
+--data /content/drive/MyDrive/nerfstudio/turtles \
+nerfstudio-data\
+--downscale-factor 4 
+
+```
+It stuck at 88.63%, step 32000:
+
+<img src="splatfacto-turtle-first-train-stopped.png" alt="splatfacto-turtle-first-train-stopped" width="600" height="320">
+
+Final checkpoint ended at step 56000:
+
+<img src="splatfacto-turtle-second-train-stopped.png" alt="splatfacto-turtle-second-train-stopped" width="800" height="320">
+
+
+#### Process cecum_t1_a dataset
+```ruby
+ns-process-data images --data /home/wangzican/data/cecum_t1_a/raw_images  --output-dir /home/wangzican/data/cecum_t1_a  --num-downscales 4
 ```
 
 &nbsp;
