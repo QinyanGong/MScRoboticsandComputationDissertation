@@ -281,6 +281,10 @@ ns-process-data images --data /home/wangzican/data/cecum_t1_a/raw_images  --outp
 ```
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/3fa222de-e9c9-4e66-a5cb-5c3f7cc7be0b)
 
+
+splatfacto--cecum_t1_a
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/8b445da7-54e9-4dcc-9440-6c1b61e893c9)
+
 &nbsp;
 ----------
 &nbsp;
