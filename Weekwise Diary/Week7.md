@@ -287,6 +287,7 @@ splatfacto--cecum_t1_a
 ns-train splatfacto --load-dir /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_021715/nerfstudio_models nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
 ```
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/8b445da7-54e9-4dcc-9440-6c1b61e893c9)
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/121c8968-d791-429f-826a-aa562cc7b5ce)
 
 &nbsp;
 ----------
