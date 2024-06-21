@@ -274,20 +274,48 @@ Final checkpoint ended at step 56000:
 
 <img src="splatfacto-turtle-second-train-stopped.png" alt="splatfacto-turtle-second-train-stopped" width="800" height="320">
 
+#### Train Gaussian Splatting on Colab
+
+Stopped at checkpoint: /home/wangzican/outputs/turtles/splatfacto/2024-06-20_021732
+
+```ruby
+fatal   : Unsupported .version 7.8; current version is '7.7'
+      ptxas fatal   : Ptx assembly aborted due to errors
+```
+reinstall cuda11.8 toolkit and update gsplat to the newest version
+```ruby
+conda uninstall cuda-toolkit
+conda list | grep cudatoolkit
+pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
+nvcc --version
+pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+pip install git+https://github.com/nerfstudio-project/gsplat
+```
+Successfully train splatfacto model on turtle dataset: /home/wangzican/outputs/unnamed/splatfacto/2024-06-20_174001
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/3fa222de-e9c9-4e66-a5cb-5c3f7cc7be0b)
 
 #### Process cecum_t1_a dataset
 ```ruby
 ns-process-data images --data /home/wangzican/data/cecum_t1_a/raw_images  --output-dir /home/wangzican/data/cecum_t1_a  --num-downscales 4
 ```
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/3fa222de-e9c9-4e66-a5cb-5c3f7cc7be0b)
 
-
-splatfacto--cecum_t1_a
+##### splatfacto--cecum_t1_a
 ```ruby
-ns-train splatfacto --load-dir /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_021715/nerfstudio_models nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
+# Train gaussian splatting model
+ns-train splatfacto nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
+# Train from the checkpoint
+ns-train splatfacto  --load-dir /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_021715/nerfstudio_models nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
 ```
+Checkpoint: /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_021715
+
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/8b445da7-54e9-4dcc-9440-6c1b61e893c9)
+
+Successfully train splatfacto on cecum_t1_a: /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_025711
+
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/121c8968-d791-429f-826a-aa562cc7b5ce)
+
+
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/ee7abc6e-6969-47dc-9442-706114fe55be)
 
 &nbsp;
