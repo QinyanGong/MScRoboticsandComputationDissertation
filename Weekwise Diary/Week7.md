@@ -288,6 +288,7 @@ ns-train splatfacto --load-dir /home/wangzican/outputs/unnamed/splatfacto/2024-0
 ```
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/8b445da7-54e9-4dcc-9440-6c1b61e893c9)
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/121c8968-d791-429f-826a-aa562cc7b5ce)
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/ee7abc6e-6969-47dc-9442-706114fe55be)
 
 &nbsp;
 ----------
