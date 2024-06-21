@@ -322,6 +322,15 @@ Successfully train splatfacto on cecum_t1_a: /home/wangzican/outputs/unnamed/spl
 
 <img src="splatfacto_cecum_t1_a_02.png" alt="splatfacto_cecum_t1_a_02" width="600" height="325">
 
+##### nerf--cecum_t1_a
+
+```ruby
+ns-train vanilla-nerf --experiment-name cecum_t1_a nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
+ns-train vanilla-nerf --load-dir /home/wangzican/outputs/cecum_t1_a/vanilla-nerf/2024-06-21_123013/nerfstudio_models --experiment-name cecum_t1_a nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
+ns-viewer --load-config {/home/wangzican/outputs/cecum_t1_a/vanilla-nerf/.../config.yml} --viewer.default-composite-depth False
+```
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/65ff2e53-ea45-4147-8d3c-092ee724a3f8)
+
 &nbsp;
 ----------
 &nbsp;
