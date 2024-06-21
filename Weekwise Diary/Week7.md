@@ -166,7 +166,7 @@ ns-train nerfacto --data /home/wangzican/data/turtles
 ```
 Successfully train nerfacto
 
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/f000aa9c-dae7-4a48-af27-0148ca657792)
+<img src="nerfacto_turtle_00.png" alt="nerfacto_turtle_00" width="600" height="325">
 
 ##### Wednesday
 
@@ -239,14 +239,13 @@ Configuration:
 ##### Train Loss & Evaluation Loss(W&B)
 It stopped training abruptly the first time, so reload checkpoint from outputs/turtles/vanilla-nerf/2024-06-19_160048/nerfstudio_models, which ran 5000 steps.
 
-<img src="vanilla-turtle-train-loss.png" alt="vanilla-turtle-train-loss" width="800" height="400">
+<img src="vanilla-turtle-train-loss.png" alt="vanilla-turtle-train-loss" width="600" height="300">
 
-<img src="vanilla-turtle-eval-loss.png" alt="vanilla-turtle-eval-loss" width="390" height="380">
+<img src="vanilla-turtle-eval-loss.png" alt="vanilla-turtle-eval-loss" width="290" height="280">
 
 Fail to train vanilla nerf
 
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/e5587a14-ae9f-4674-9bb0-c1247ff2bad5)
-
+<img src="nerf_turtle_00.png" alt="nerf_turtle_00" width="600" height="325">
 
 #### Train Gaussian Splatting on Colab
 ``` ruby
@@ -264,17 +263,17 @@ nerfstudio-data \
 --data /content/drive/MyDrive/nerfstudio/turtles \
 nerfstudio-data\
 --downscale-factor 4 
-
 ```
+
 It stuck at 88.63%, step 32000:
 
-<img src="splatfacto-turtle-first-train-stopped.png" alt="splatfacto-turtle-first-train-stopped" width="600" height="320">
+<img src="splatfacto-turtle-first-train-stopped.png" alt="splatfacto-turtle-first-train-stopped" width="400" height="200">
 
 Final checkpoint ended at step 56000:
 
-<img src="splatfacto-turtle-second-train-stopped.png" alt="splatfacto-turtle-second-train-stopped" width="800" height="320">
+<img src="splatfacto-turtle-second-train-stopped.png" alt="splatfacto-turtle-second-train-stopped" width="400" height="160">
 
-#### Train Gaussian Splatting on Colab
+#### Train Gaussian Splatting locally
 
 Stopped at checkpoint: /home/wangzican/outputs/turtles/splatfacto/2024-06-20_021732
 
@@ -282,7 +281,9 @@ Stopped at checkpoint: /home/wangzican/outputs/turtles/splatfacto/2024-06-20_021
 fatal   : Unsupported .version 7.8; current version is '7.7'
       ptxas fatal   : Ptx assembly aborted due to errors
 ```
-reinstall cuda11.8 toolkit and update gsplat to the newest version
+
+Reinstall cuda11.8 toolkit and update gsplat to the newest version
+
 ```ruby
 conda uninstall cuda-toolkit
 conda list | grep cudatoolkit
@@ -292,10 +293,13 @@ nvcc --version
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 pip install git+https://github.com/nerfstudio-project/gsplat
 ```
+
 Successfully train splatfacto model on turtle dataset: /home/wangzican/outputs/unnamed/splatfacto/2024-06-20_174001
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/3fa222de-e9c9-4e66-a5cb-5c3f7cc7be0b)
+
+<img src="splatfacto_turtle_00.png" alt="splatfacto_turtle_00" width="600" height="325">
 
 #### Process cecum_t1_a dataset
+
 ```ruby
 ns-process-data images --data /home/wangzican/data/cecum_t1_a/raw_images  --output-dir /home/wangzican/data/cecum_t1_a  --num-downscales 4
 ```
@@ -307,16 +311,16 @@ ns-train splatfacto nerfstudio-data --data /home/wangzican/data/cecum_t1_a --dow
 # Train from the checkpoint
 ns-train splatfacto  --load-dir /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_021715/nerfstudio_models nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
 ```
+
 Checkpoint: /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_021715
 
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/8b445da7-54e9-4dcc-9440-6c1b61e893c9)
+<img src="splatfacto_cecum_t1_a_00.png" alt="splatfacto_cecum_t1_a_00" width="600" height="325">
 
 Successfully train splatfacto on cecum_t1_a: /home/wangzican/outputs/unnamed/splatfacto/2024-06-21_025711
 
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/121c8968-d791-429f-826a-aa562cc7b5ce)
+<img src="splatfacto_cecum_t1_a_01.png" alt="splatfacto_cecum_t1_a_01" width="600" height="110">
 
-
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/ee7abc6e-6969-47dc-9442-706114fe55be)
+<img src="splatfacto_cecum_t1_a_02.png" alt="splatfacto_cecum_t1_a_02" width="600" height="325">
 
 &nbsp;
 ----------
