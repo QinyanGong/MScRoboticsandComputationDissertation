@@ -279,6 +279,7 @@ Final checkpoint ended at step 56000:
 ```ruby
 ns-process-data images --data /home/wangzican/data/cecum_t1_a/raw_images  --output-dir /home/wangzican/data/cecum_t1_a  --num-downscales 4
 ```
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/3fa222de-e9c9-4e66-a5cb-5c3f7cc7be0b)
 
 &nbsp;
 ----------
