@@ -1,9 +1,9 @@
 
 ----------
 ###### Title: 2024 Robotics and Computation Dissertation - Week 6
-###### Date: 17-06-2024 -- 21-06-2024
+###### Date: 17-06-2024 -- 23-06-2024
 ----------
-###### Monday-Tuesday
+###### Monday-Sunday
 #### Nerfstudio configuration on computer from start
 
 ##### Create environment
@@ -330,6 +330,12 @@ ns-train vanilla-nerf --load-dir /home/wangzican/outputs/cecum_t1_a/vanilla-nerf
 ns-viewer --load-config {/home/wangzican/outputs/cecum_t1_a/vanilla-nerf/.../config.yml} --viewer.default-composite-depth False
 ```
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/65ff2e53-ea45-4147-8d3c-092ee724a3f8)
+
+#### mip-nerf--cecum_t1_a
+
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/3fd9eabf-9bb6-4b4e-9b4c-7a803f16c055)
+
+Both nerf and mip-nerf are very slow and hard to train.
 
 &nbsp;
 ----------
