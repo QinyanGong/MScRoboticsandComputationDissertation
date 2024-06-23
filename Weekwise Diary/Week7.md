@@ -329,12 +329,11 @@ ns-train vanilla-nerf --experiment-name cecum_t1_a nerfstudio-data --data /home/
 ns-train vanilla-nerf --load-dir /home/wangzican/outputs/cecum_t1_a/vanilla-nerf/2024-06-21_123013/nerfstudio_models --experiment-name cecum_t1_a nerfstudio-data --data /home/wangzican/data/cecum_t1_a --downscale-factor 2
 ns-viewer --load-config {/home/wangzican/outputs/cecum_t1_a/vanilla-nerf/.../config.yml} --viewer.default-composite-depth False
 ```
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/65ff2e53-ea45-4147-8d3c-092ee724a3f8)
+<img src="vanilla-nerf--cecum-t1-a--run summary.png" alt="mip-nerf--cecum-t1-a--run summary" width="500" height="290">
 
 #### mip-nerf--cecum_t1_a
 
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/3fd9eabf-9bb6-4b4e-9b4c-7a803f16c055)
-
+<img src="mip-nerf--cecum-t1-a--run summary.png" alt="mip-nerf--cecum-t1-a--run summary" width="500" height="290">
 Both nerf and mip-nerf are very slow and hard to train.
 
 &nbsp;
