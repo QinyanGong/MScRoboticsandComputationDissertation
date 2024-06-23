@@ -337,8 +337,8 @@ ns-viewer --load-config {/home/wangzican/outputs/cecum_t1_a/vanilla-nerf/.../con
 Both nerf and mip-nerf are very slow and hard to train.
 
 #### Comparasion between nerf and mip nerf on W&B
-![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/47578411-0173-4402-baa0-4ffd6a4881e5)
 
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/a1b8ae67-391f-4843-b5fb-be516079f6ba)
 
 &nbsp;
 ----------
