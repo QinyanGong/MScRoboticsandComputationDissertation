@@ -288,7 +288,13 @@ Reinstall cuda11.8 toolkit and update gsplat to the newest version
 conda uninstall cuda-toolkit
 conda list | grep cudatoolkit
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
-conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
+
+# download 11.8 cuda toolkit from official website
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cuda
+
 nvcc --version
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 pip install git+https://github.com/nerfstudio-project/gsplat
