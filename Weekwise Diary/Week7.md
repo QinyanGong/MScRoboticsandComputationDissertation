@@ -346,6 +346,20 @@ The training process is extremely slow
 
 <img src="d-nerf--lego--run summary.png" alt="d-nerf--lego--run summary" width="500" height="240">
 
+Start from last run:
+
+<img src="d-nerf--lego--run summary01.png" alt="d-nerf--lego--run summary01" width="400" height="240">
+
+Run time: 
+
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/e16d9cff-7e6e-44d8-8a8b-16b2eac3ade2)
+
+
+Comparasion among Nerf, Mip-Nerf, and D-Nerf:
+
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/c74c033f-2a8f-4983-a44b-996488835f0d)
+
+
 On Colab with D-Nerf original code:
 The Colab code is stored in [D_nerf.ipynb](/D_nerf.ipynb)
 
