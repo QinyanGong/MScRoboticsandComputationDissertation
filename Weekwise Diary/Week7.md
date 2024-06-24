@@ -340,6 +340,18 @@ Both nerf and mip-nerf are very slow and hard to train.
 
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/a1b8ae67-391f-4843-b5fb-be516079f6ba)
 
+#### D-Nerf 
+With nerfstudio:
+The training process is extremely slow
+
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/b3d0c623-4388-4eae-84db-3c40a62ea311)
+
+On Colab with D-Nerf original code:
+The Colab code is stored in [D_nerf.ipynb](./D_nerf.ipynb)
+
+![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/87da963d-03f7-4c9f-a646-be74a0ac506d)
+
+
 &nbsp;
 ----------
 &nbsp;
