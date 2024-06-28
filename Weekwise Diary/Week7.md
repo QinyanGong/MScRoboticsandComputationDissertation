@@ -290,7 +290,12 @@ conda list | grep cudatoolkit
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
 # download 11.8 cuda toolkit
+conda install certifi
+conda update openssl ca-certificates certifi
+
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
+conda install cudatoolkit=11.8
+
 
 nvcc --version
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
