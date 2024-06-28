@@ -1,0 +1,12 @@
+remove environment:
+
+```ruby
+# Deactivate the environment if it is active
+conda deactivate
+
+# Remove the environment
+conda env remove --name myenv
+
+# Verify that the environment has been removed
+conda env list
+```
