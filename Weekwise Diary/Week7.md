@@ -295,6 +295,7 @@ conda update openssl ca-certificates certifi
 
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 conda install cudatoolkit=11.8
+conda install nvidia/label/cuda-11.8.0::cuda-toolkit
 
 
 nvcc --version
