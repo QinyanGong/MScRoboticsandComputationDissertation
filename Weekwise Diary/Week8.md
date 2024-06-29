@@ -18,9 +18,16 @@ pip uninstall torch torchvision functorch tinycudann
 # Install PyTorch 2.1.2 with CUDA 11.8:
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
+# Install cuda toolkit from [conda website](https://anaconda.org/nvidia/cuda-toolkit)
 conda install nvidia/label/cuda-11.8.0::cuda-toolkit
+
 # Install tiny-cuda-nn/gsplat
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+# or install from [conda](https://github.com/conda-forge/ninja-feedstock)
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+conda install ninja
+
 
 pip install git+https://github.com/ingra14m/depth-diff-gaussian-rasterization.git@depth
 ```
