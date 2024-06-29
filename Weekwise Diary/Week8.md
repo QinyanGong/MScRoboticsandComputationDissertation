@@ -21,6 +21,12 @@ pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https
 # Install cuda toolkit from [conda website](https://anaconda.org/nvidia/cuda-toolkit)
 conda install nvidia/label/cuda-11.8.0::cuda-toolkit
 
+# Use different cuda
+alias use_endogs_nvcc='export CUDA_HOME=/home/wangzican/miniconda3/envs/EndoGS'
+alias use_nerfstudio_nvcc='export CUDA_HOME=/home/wangzican/miniconda3/envs/nerfstudio'
+# Now, you can easily switch between the nvcc binaries by running:
+use_endogs_nvcc
+
 # Install tiny-cuda-nn/gsplat
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 # or install from [conda](https://github.com/conda-forge/ninja-feedstock)
