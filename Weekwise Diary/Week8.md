@@ -7,6 +7,14 @@ conda deactivate
 # Remove the environment
 conda env remove --name myenv
 
+
+# Clear Conda Cache and Reinstall:
+# Clear the Conda cache and reinstall PyTorch. This ensures any corrupted or incomplete packages are removed:
+conda clean --all
+conda uninstall pytorch torchvision torchaudio
+conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch -c nvidia
+
+
 # Verify that the environment has been removed
 conda env list
 ```
@@ -55,3 +63,10 @@ pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https
 ImportError: cannot import name 'is_arabic' from 'charset_normalizer.utils' (/home/wangzican/miniconda3/envs/EndoGS/lib/python3.8/site-packages/charset_normalizer/utils.py)
  pip install chardet
 ```
+
+#### Fine Review of 3D Gaussian Splatting
+
+- [Ray Marching](https://michaelwalczyk.com/blog-ray-marching.html)
+- [What do we mean by isotropic/anisotropic covariance?](https://statisticaloddsandends.wordpress.com/2019/10/23/what-do-we-mean-by-isotropic-anisotropic-covariance/)
+- Gaussians are defined by a full 3D covariance matrix Σ defined in world space centered at point (mean): [EWA Volume Splatting](https://www.cs.umd.edu/~zwicker/publications/EWAVolumeSplatting-VIS01.pdf)
+- 
