@@ -69,4 +69,4 @@ ImportError: cannot import name 'is_arabic' from 'charset_normalizer.utils' (/ho
 - [Ray Marching](https://michaelwalczyk.com/blog-ray-marching.html)
 - [What do we mean by isotropic/anisotropic covariance?](https://statisticaloddsandends.wordpress.com/2019/10/23/what-do-we-mean-by-isotropic-anisotropic-covariance/)
 - Gaussians are defined by a full 3D covariance matrix Σ defined in world space centered at point (mean): [EWA Volume Splatting](https://www.cs.umd.edu/~zwicker/publications/EWAVolumeSplatting-VIS01.pdf)
-- 
+- [Plenoxels: Radiance Fields without Neural Networks Alex](https://arxiv.org/abs/2112.05131)
