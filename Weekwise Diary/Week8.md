@@ -3,7 +3,7 @@
 ###### Date: 8-07-2024 -- 13-07-2024
 ----------
 ###### Monday-Sunday
-#### Nerfstudio configuration on computer from start
+
 
 remove environment:
 
