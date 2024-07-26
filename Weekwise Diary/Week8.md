@@ -1,3 +1,10 @@
+----------
+###### Title: 2024 Robotics and Computation Dissertation - Week 6
+###### Date: 17-06-2024 -- 23-06-2024
+----------
+###### Monday-Sunday
+#### Nerfstudio configuration on computer from start
+
 remove environment:
 
 ```ruby
@@ -75,3 +82,9 @@ Give up on configing ENDOGS
 
 #### RUN KPLAN
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/ca83da31-ad1d-4e01-91c2-2336bd7f9d8c)
+
+
+&nbsp;
+----------
+&nbsp;
+> ###### [Next Week](Week9.md)
