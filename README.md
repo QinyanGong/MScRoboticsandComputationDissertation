@@ -12,3 +12,5 @@ Rules:
 - [Week 5](Weekwise%20Diary/Week5.md)
 - [Week 6](Weekwise%20Diary/Week6.md)
 - [Week 7](Weekwise%20Diary/Week7.md)
+- [Week 8](Weekwise%20Diary/Week7.md)
+- [Week 9](Weekwise%20Diary/Week7.md)
