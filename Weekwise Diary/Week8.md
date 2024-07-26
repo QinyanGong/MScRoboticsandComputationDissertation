@@ -1,6 +1,6 @@
 ----------
 ###### Title: 2024 Robotics and Computation Dissertation - Week 6
-###### Date: 17-06-2024 -- 23-06-2024
+###### Date: 8-07-2024 -- 13-07-2024
 ----------
 ###### Monday-Sunday
 #### Nerfstudio configuration on computer from start
