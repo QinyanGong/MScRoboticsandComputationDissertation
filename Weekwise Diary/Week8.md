@@ -84,6 +84,17 @@ Give up on configing ENDOGS
 ![image](https://github.com/QinyanGong/MScRoboticsandComputationDissertation/assets/74662060/ca83da31-ad1d-4e01-91c2-2336bd7f9d8c)
 
 
+
+#### Design two pipelines of GSDiff:
+
+Pipeline inspired  by [ReConfusion](https://arxiv.org/abs/2312.02981):
+
+<img src="GSDiff.jpg" alt="GSDiff.jpg" width="600" height="325">
+
+Pipeline inspired  by [GaussianDiffusion](https://arxiv.org/abs/2311.11221)
+
+<img src="GSDiff01.jpg" alt="GSDiff.jpg" width="600" height="325">
+
 &nbsp;
 ----------
 &nbsp;
