@@ -9,15 +9,15 @@
 - Inherit from Splatfacto Model, and add methods to acquire noisy renderings (by perturbing the gaussians' means)
 - Add DDIM_Splatfacto configurations in nerfstudio.model_configs
 
-## Write code for training
+## Create DDIM_Splatfacto Pipeline
+- Inherit from Vanilla Pipeline
+- Change methods for Splatfacto Model
 
-![image](https://github.com/user-attachments/assets/e99b7d1b-50be-419b-90be-f5cd82a6695b)
-
-My pipeline:
+My pipeline Architecture:
 ![GSDiff02](https://github.com/user-attachments/assets/b1a4480f-337a-47e7-8026-348a720ed4fa)
 
-&nbsp;
-----------
+## Write Motivation and literature review in Overleaf
+
 
 &nbsp;
 > ###### [Next Week](Week11.md)
