@@ -1,5 +1,5 @@
 ----------
-###### Title: 2024 Robotics and Computation Dissertation - Week 11
+###### Title: 2024 Robotics and Computation Dissertation - Week 12
 ###### Date: 12-08-2024 -- 16-08-2024
 ----------
 ###### Monday-Sunday
@@ -10,9 +10,12 @@
 
 - timesteps for adding noise: 50
 - timesteps for denoise: 12
+- Noise level: sample from standard normal distribution * 4
 - Results:
-  ![image](https://github.com/user-attachments/assets/491eaf34-218b-4d86-9eca-3ea113cb5afe)
-  ![image](https://github.com/user-attachments/assets/68fab811-f86e-4d02-b9f0-01ffa66bad71)
+  
+| Non-diffused Image   | Diffused Image |
+| ------------- | ------------ |
+|  <img src="non_diffused_3dsplat_image00.png" alt="non_diffused_3dsplat_image00" width="225" height="180"> | <img src="diffused_3dsplat_image00.png" alt="diffused_3dsplat_image00" width="225" height="180"> |
 
 ###### Second test
 
@@ -21,7 +24,8 @@
 - Noise level: sample from standard normal distribution * 4
 - Results:
 
+
 &nbsp;
 ----------
 &nbsp;
-> ###### [Next Week](Week12.md)
+> ###### [Next Week](Week13.md)
