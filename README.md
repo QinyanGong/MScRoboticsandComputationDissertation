@@ -16,3 +16,4 @@ Rules:
 - [Week 9](Weekwise%20Diary/Week9.md)
 - [Week 10](Weekwise%20Diary/Week10.md)
 - [Week 11](Weekwise%20Diary/Week11.md)
+- [Week 12](Weekwise%20Diary/Week12.md)
