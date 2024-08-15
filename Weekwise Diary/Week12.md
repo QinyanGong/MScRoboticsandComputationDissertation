@@ -48,7 +48,15 @@ The training result is not good, and it seems that further training will only ma
 1. The default evaluation is over original data that also used for train, so the Structural Similarity Index (SSIM) measuring the similarity between two images and the Learned Perceptual Image Patch Similarity (LPIPS) , a metric used to evaluate the perceptual similarity between images with Lower values indicating higher similarity, are definately with better scores for splatfacto trained on original data only.
 2. num_rays_per_sec indicates the number of rays processed per second, which is a measure of rendering speed. Frames per second (FPS) is a measure of how many frames the system can render per second. Higher FPS indicates smoother performance. From the above plot of evaluation json file, we see a smoother performance and quicker rendering for DDIM Gaussian Splatting model.
 
-DDIM-Splat Rendering
+Gaussian Splatting Rendering
+
+[![Watch the video](https://github.com/user-attachments/assets/44a515d8-11ea-4a0d-b16c-770ea1dff707)](https://github.com/user-attachments/assets/44a515d8-11ea-4a0d-b16c-770ea1dff707)
+
+DDIM-Splat Rendering in the same trajectory
+
+[![Watch the video](https://github.com/user-attachments/assets/57329a2d-026d-492f-9fd2-341feb7e10a9)](https://github.com/user-attachments/assets/57329a2d-026d-492f-9fd2-341feb7e10a9)
+
+
 
 
 &nbsp;
