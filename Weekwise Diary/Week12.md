@@ -24,6 +24,10 @@
 - timesteps for denoise: 15
 - Noise level: sample from standard normal distribution * 4
 - Results:
+- 
+| Non-diffused Image   | Diffused Image |
+| ------------- | ------------ |
+|  <img src="non-diffused_3dsplat_image01.png" alt="non_diffused_3dsplat_image01" width="225" height="180"> | <img src="diffused_3dsplat_image01.png" alt="diffused_3dsplat_image01" width="225" height="180"> |
 
 
 &nbsp;
