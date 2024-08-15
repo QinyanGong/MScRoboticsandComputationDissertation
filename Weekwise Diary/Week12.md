@@ -41,7 +41,7 @@ The training result is not good, and it seems that further training will only ma
 2. Run ddim-splatfacto and splatfacto for another 500 steps
 3. Evaluate the model with evaluation command offerd by nerfstudio
 
-<img src="10500evaluation_splatanddimsplat.png" alt="10500evaluation_splatanddimsplat" width="800" height="180">
+![image](https://github.com/user-attachments/assets/be639e28-4d45-403f-813b-1fb07759de81)
 
 ###### Analysis
 
