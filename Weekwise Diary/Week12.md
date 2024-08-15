@@ -45,17 +45,20 @@ The training result is not good, and it seems that further training will only ma
 
 ###### Analysis
 
-1. The default evaluation is over original data that also used for train, so the Structural Similarity Index (SSIM) measuring the similarity between two images and the Learned Perceptual Image Patch Similarity (LPIPS) , a metric used to evaluate the perceptual similarity between images with Lower values indicating higher similarity, are definately with better scores for splatfacto trained on original data only.
+1. The default evaluation is over original data that also used for train, so the Structural Similarity Index (SSIM) measuring the similarity between two images is with better scores for splatfacto trained on original data only. However, the Learned Perceptual Image Patch Similarity (LPIPS) , a metric used to evaluate the perceptual similarity between images with Lower values indicating higher similarity shows a lower score on DDIM Gaussian Splatting model.
 2. num_rays_per_sec indicates the number of rays processed per second, which is a measure of rendering speed. Frames per second (FPS) is a measure of how many frames the system can render per second. Higher FPS indicates smoother performance. From the above plot of evaluation json file, we see a smoother performance and quicker rendering for DDIM Gaussian Splatting model.
 
-Gaussian Splatting Rendering
+###### Renderings
+
+- Gaussian Splatting Rendering
 
 [![Watch the video](https://github.com/user-attachments/assets/44a515d8-11ea-4a0d-b16c-770ea1dff707)](https://github.com/user-attachments/assets/44a515d8-11ea-4a0d-b16c-770ea1dff707)
 
-DDIM-Splat Rendering in the same trajectory
+- DDIM-Splat Rendering in the same trajectory
 
 [![Watch the video](https://github.com/user-attachments/assets/57329a2d-026d-492f-9fd2-341feb7e10a9)](https://github.com/user-attachments/assets/57329a2d-026d-492f-9fd2-341feb7e10a9)
 
+Demonstrated by two videos, clearly, Gaussian Splatting rendering has a smoother surface, but is constraint by viewing angles. For example, it shows more artifacts, and the scenes are blured. In comparison, although it is not so smooth for DDIM-Splat rendering, it presents more detail compared with the 3DGS only model. 
 
 
 
