@@ -4,10 +4,13 @@
 ----------
 ###### Monday-Sunday
 
-##### Experiment with different hyperparameters for diffusion model in the loop
+The training result is not good, and it seems that further training will only make it perform worse. Let's find out the reasons.
+
+##### Experiment with different hyperparameters for diffusion model in the ddim_splat loop
 
 ###### First test
 
+- Select images from novel view with 0.4 probability
 - timesteps for adding noise: 50
 - timesteps for denoise: 12
 - Noise level: sample from standard normal distribution * 4
@@ -19,6 +22,7 @@
 
 ###### Second test
 
+- Select images from novel view with 0.4 probability
 - Conclude the problems encountered: denoising steps are not enough; forget to normalize before diffusion and denormalize after that
 - timesteps for adding noise: 50
 - timesteps for denoise: 15
