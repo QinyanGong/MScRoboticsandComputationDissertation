@@ -19,6 +19,7 @@
 
 ###### Second test
 
+- Conclude the problems encountered: denoising steps are not enough; forget to normalize before diffusion and denormalize after that
 - timesteps for adding noise: 50
 - timesteps for denoise: 15
 - Noise level: sample from standard normal distribution * 4
