@@ -60,7 +60,11 @@ The training result is not good, and it seems that further training will only ma
 
 Demonstrated by two videos, clearly, Gaussian Splatting rendering has a smoother surface, but is constraint by viewing angles. For example, it shows more artifacts, and the scenes are blured. In comparison, although it is not so smooth for DDIM-Splat rendering, it presents more detail compared with the 3DGS only model. 
 
+##### Later work
 
+Refine the model by
+1. either adding surface alignment techque in the pipeline
+2. or save the diffused images that have low lpip value(more similar) and train with those data(disable remove gaussian, and enable if it is original data)
 
 &nbsp;
 ----------
