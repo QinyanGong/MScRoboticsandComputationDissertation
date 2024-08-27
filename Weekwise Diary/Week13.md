@@ -1,6 +1,6 @@
 ----------
 ###### Title: 2024 Robotics and Computation Dissertation - Week 12
-###### Date: 12-08-2024 -- 16-08-2024
+###### Date: 25-08-2024 -- 30-08-2024
 ----------
 ###### Monday-Sunday
 
@@ -28,4 +28,4 @@
 &nbsp;
 ----------
 &nbsp;
-> ###### [Next Week](Week13.md)
+> ###### [Next Week](Week14.md)
