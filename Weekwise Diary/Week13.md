@@ -37,9 +37,7 @@ Command to train the ddim_splatfacto model
 
 '''
 ns-train ddim_splatfacto --pipeline.model.df-img-output-dir /root/renders/cecum_t1_a/df_gt --max-num-iterations 3000 --experiment-name cecum_t1_a --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models  blender-data --data /root/hopodata/c1_a 
-
-ns-train ddim_splatfacto --max-num-iterations 3000 --experiment-name cecum_t1_a --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models blender-
-data --steps-per-save --data /root/hopodata/c1_a 
+ns-train ddim_splatfacto --max-num-iterations 3000 --experiment-name cecum_t1_a --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models --steps-per-save 1000  blender-data  --data /root/hopodata/c1_a 
 '''
 
 
