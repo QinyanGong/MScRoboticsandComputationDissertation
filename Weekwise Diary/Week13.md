@@ -33,6 +33,11 @@ export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/stub
 export PYTHONPATH=$PYTHONPATH:/home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9:/home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9/lib-dynload:\
 /home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9/site-packages
 
+Command to train the ddim_splatfacto model
+'''
+ns-train ddim_splatfacto --pipeline.model.df-img-output-dir /root/renders/cecum_t1_a/df_gt --max-num-iterations 3000 --experiment-name cecum_t1_a --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models  blender-data --data /root/hopodata/c1_a 
+'''
+
 &nbsp;
 ----------
 &nbsp;
