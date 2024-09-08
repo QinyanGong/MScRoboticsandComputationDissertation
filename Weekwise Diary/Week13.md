@@ -40,6 +40,7 @@ ns-train ddim_splatfacto --pipeline.model.df-img-output-dir /root/renders/cecum_
 ns-train ddim_splatfacto --max-num-iterations 3000 --experiment-name cecum_t1_a --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models --steps-per-save 1000  blender-data  --data /root/hopodata/c1_a 
 '''
 ![image](https://github.com/user-attachments/assets/f2436f3a-8b83-4111-8cbf-bf594662f825)
+![image](https://github.com/user-attachments/assets/28570523-2a90-41cc-84bf-814f44b3fcb1)
 
 
 &nbsp;
