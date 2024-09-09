@@ -42,7 +42,13 @@ ns-train ddim_splatfacto --max-num-iterations 3000 --experiment-name cecum_t1_a 
 ![image](https://github.com/user-attachments/assets/f2436f3a-8b83-4111-8cbf-bf594662f825)
 ![image](https://github.com/user-attachments/assets/28570523-2a90-41cc-84bf-814f44b3fcb1)
 
+c1a 0.02 ddim 1e-4 sdf
+![image](https://github.com/user-attachments/assets/4c76eece-b9ab-497a-89d6-b25224cae470)
 
+c1a 0.1 ddim sample 0 sdf
+![image](https://github.com/user-attachments/assets/26f8daed-69a8-4d96-9f4f-eb01895d5465)
+
+ns-eval --load-config /root/outputs/cecum_t1_a/splatfacto/2024-09-09_023806/config.yml --output-path /root/outputs/cecum_t1_a/splatfacto/2024-09-09_023806/output.json
 &nbsp;
 ----------
 &nbsp;
