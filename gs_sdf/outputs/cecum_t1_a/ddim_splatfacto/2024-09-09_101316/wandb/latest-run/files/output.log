@@ -1,0 +1,145 @@
+[1mlogging events to: outputs/cecum_t1_a/ddim_splatfacto/2024-09-09_101316
+[10:13:34] Caching [35m/[39m undistorting train images                                            ]8;id=442417;file:///root/nerfstudio/nerfstudio/data/datamanagers/full_images_datamanager.py\full_images_datamanager.py]8;;\:]8;id=33326;file:///root/nerfstudio/nerfstudio/data/datamanagers/full_images_datamanager.py#230\230]8;;\
+Caching / undistorting train images [38m━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━[39m [35m 45%[39m [36m0:00:03
+[?25h
+/root/miniconda3/lib/python3.10/site-packages/torch/_inductor/compile_fx.py:135: UserWarning: TensorFloat32 tensor cores for float32 matrix multiplication available but not enabled. Consider setting `torch.set_float32_matmul_precision('high')` for better performance.
+           Duplicating [1m0.0027595020589766647[22m gaussians: [1m1166[22m/[1m422540[22m                               ]8;id=439898;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=231148;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+           Culled [1m5196[22m gaussians [1m(3337[22m below alpha thresh, [1m19[22m too bigs, [1m422196[22m remaining[1m)[22m         ]8;id=6814;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=795667;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+           Caching [35m/[39m undistorting eval images                                             ]8;id=291369;file:///root/nerfstudio/nerfstudio/data/datamanagers/full_images_datamanager.py\full_images_datamanager.py]8;;\:]8;id=163032;file:///root/nerfstudio/nerfstudio/data/datamanagers/full_images_datamanager.py#230\230]8;;\
+[32mEvaluating all images...[39m [38m━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[39m [33m0:00:00[39m [32m 4/56
+           wrapping.
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec     Test Rays / Sec
+--------------------------------------------------------------------------------------------------------
+7000 (233.33%)      10 s, 996.684 ms     11 h, 46 m, 54 s     132.59 K             461.13 K
+7010 (233.67%)      1 s, 37.108 ms       22 h, 50 m, 42 s     34.77 M
+7020 (234.00%)      37.809 ms            23 h, 57 m, 29 s     40.33 M
+7030 (234.33%)      34.339 ms            23 h, 57 m, 42 s     42.60 M
+7040 (234.67%)      34.305 ms            23 h, 57 m, 42 s     42.63 M
+7050 (235.00%)      34.501 ms            23 h, 57 m, 41 s     42.35 M
+7060 (235.33%)      34.693 ms            23 h, 57 m, 40 s     42.11 M
+7070 (235.67%)      35.330 ms            23 h, 57 m, 37 s     41.43 M
+7080 (236.00%)      34.858 ms            23 h, 57 m, 38 s     42.00 M
+7090 (236.33%)      34.364 ms            23 h, 57 m, 40 s     42.49 M
+[10:13:55] Splitting [1m0.01979412405612559[22m gaussians: [1m8357[22m/[1m422196[22m                                   ]8;id=846335;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=45561;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.01779268396668846[22m gaussians: [1m7512[22m/[1m422196[22m                                 ]8;id=967096;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=396922;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+7190 (239.67%)      34.461 ms            23 h, 57 m, 36 s     42.41 M                                    59176;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=648564;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:00] Splitting [1m0.017022546712899593[22m gaussians: [1m7300[22m/[1m428843[22m                                  ]8;id=48050;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=693384;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.02070221502974282[22m gaussians: [1m8878[22m/[1m428843[22m                                 ]8;id=896865;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=244098;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+7280 (242.67%)      33.208 ms            23 h, 57 m, 38 s     44.05 M                                    75435;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=666563;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+7290 (243.00%)      33.573 ms            23 h, 57 m, 36 s     43.54 M                                    19684;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=702729;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+7300 (243.33%)      35.011 ms            23 h, 57 m, 30 s     42.72 M              52.61 M               79514;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=74870;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+7390 (246.33%)      32.751 ms            23 h, 57 m, 37 s     44.64 M                                    64544;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=256702;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:09] Splitting [1m0.014238970437445599[22m gaussians: [1m6249[22m/[1m438866[22m                                  ]8;id=671088;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=721590;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.022273313494324008[22m gaussians: [1m9775[22m/[1m438866[22m                                ]8;id=883794;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=805635;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+7490 (249.67%)      33.206 ms            23 h, 57 m, 31 s     44.07 M                                    3659;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=844151;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:14] Splitting [1m0.012515967680740677[22m gaussians: [1m5575[22m/[1m445431[22m                                  ]8;id=957492;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=988712;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.02106948101950695[22m gaussians: [1m9385[22m/[1m445431[22m                                 ]8;id=222955;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=687277;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+7580 (252.67%)      34.683 ms            23 h, 57 m, 22 s     42.14 M                                    74079;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=481141;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+7590 (253.00%)      34.783 ms            23 h, 57 m, 21 s     42.02 M                                    88637;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=565158;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+7600 (253.33%)      35.683 ms            23 h, 57 m, 16 s     41.34 M              61.27 M               41435;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=611878;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+7670 (255.67%)      33.682 ms            23 h, 57 m, 23 s     43.49 M                                    34277;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=517488;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+7680 (256.00%)      34.027 ms            23 h, 57 m, 21 s     43.03 M                                    60265;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=657924;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+7690 (256.33%)      33.629 ms            23 h, 57 m, 23 s     43.49 M                                    25380;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=66613;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+7790 (259.67%)      33.264 ms            23 h, 57 m, 21 s     43.97 M                                    54816;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=263626;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:28] Splitting [1m0.007651566082294737[22m gaussians: [1m3551[22m/[1m464088[22m                                  ]8;id=755731;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=120116;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.020500422333695333[22m gaussians: [1m9514[22m/[1m464088[22m                                ]8;id=279786;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=805934;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+7890 (263.00%)      34.005 ms            23 h, 57 m, 14 s     43.03 M                                    55884;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=165840;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:32] Splitting [1m0.012168461352341514[22m gaussians: [1m5683[22m/[1m467027[22m                                  ]8;id=276183;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=524902;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.025692304727563932[22m gaussians: [1m11999[22m/[1m467027[22m                               ]8;id=111579;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=912804;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+7990 (266.33%)      34.749 ms            23 h, 57 m, 7 s      42.08 M                                    32323;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=638551;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:37] Splitting [1m0.0083795238275611[22m gaussians: [1m3982[22m/[1m475206[22m                                    ]8;id=565579;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=999816;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.022872185957248013[22m gaussians: [1m10869[22m/[1m475206[22m                               ]8;id=599;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=628038;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+           Culled [1m14471[22m gaussians [1m(10547[22m below alpha thresh, [1m18[22m too bigs, [1m479568[22m remaining[1m)[22m       ]8;id=974230;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=380612;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+8100 (270.00%)      36.235 ms            23 h, 56 m, 56 s     40.77 M              65.86 M               55662;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=72574;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+8190 (273.00%)      33.740 ms            23 h, 57 m, 5 s      43.32 M                                    34628;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=691798;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:48] Splitting [1m0.008311623102155384[22m gaussians: [1m4039[22m/[1m485946[22m                                  ]8;id=553306;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=914812;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.024274302082947487[22m gaussians: [1m11796[22m/[1m485946[22m                               ]8;id=565492;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=791952;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+8290 (276.33%)      33.980 ms            23 h, 57 m, 1 s      43.02 M                                    26858;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=418373;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:14:52] Splitting [1m0.007171024667430003[22m gaussians: [1m3526[22m/[1m491701[22m                                  ]8;id=542717;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=473417;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.024527100819400408[22m gaussians: [1m12060[22m/[1m491701[22m                               ]8;id=354508;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=22056;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+8390 (279.67%)      33.622 ms            23 h, 56 m, 59 s     43.50 M                                    30914;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=7540;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+8400 (280.00%)      34.270 ms            23 h, 56 m, 55 s     42.93 M              68.16 M               0674;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=949401;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+8410 (280.33%)      35.246 ms            23 h, 56 m, 50 s     41.67 M                                    39131;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=249565;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+8470 (282.33%)      34.561 ms            23 h, 56 m, 51 s     42.32 M                                    65427;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=138739;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+8480 (282.67%)      33.746 ms            23 h, 56 m, 56 s     43.38 M                                    95948;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=846721;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+8490 (283.00%)      34.296 ms            23 h, 56 m, 52 s     42.69 M                                    90993;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=451989;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+8590 (286.33%)      34.017 ms            23 h, 56 m, 50 s     43.02 M                                    05798;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=764491;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:15:06] Splitting [1m0.008431001964868854[22m gaussians: [1m4278[22m/[1m507413[22m                                  ]8;id=63556;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=422179;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.026298104305565683[22m gaussians: [1m13344[22m/[1m507413[22m                               ]8;id=114576;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=260735;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+8690 (289.67%)      34.899 ms            23 h, 56 m, 42 s     41.90 M                                    46991;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=442374;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:15:11] Splitting [1m0.007722577376226187[22m gaussians: [1m3978[22m/[1m515113[22m                                  ]8;id=968114;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=79046;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.026910600198403068[22m gaussians: [1m13862[22m/[1m515113[22m                               ]8;id=577057;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=102664;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+8780 (292.67%)      34.355 ms            23 h, 56 m, 42 s     42.60 M                                    5474;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=97793;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+8790 (293.00%)      34.262 ms            23 h, 56 m, 42 s     42.74 M                                    24130;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=906651;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+8800 (293.33%)      34.204 ms            23 h, 56 m, 42 s     42.94 M              68.86 M               97382;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=2260;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+8870 (295.67%)      35.065 ms            23 h, 56 m, 35 s     41.75 M                                    23267;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=477110;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+8880 (296.00%)      35.057 ms            23 h, 56 m, 34 s     41.71 M                                    82765;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=694022;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+8890 (296.33%)      34.709 ms            23 h, 56 m, 36 s     42.11 M                                    11120;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=228275;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+8990 (299.67%)      35.684 ms            23 h, 56 m, 27 s     41.01 M                                    3918;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=784309;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[32mEvaluating all images...[39m [38m━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━[39m [33m0:00:00[39m [32m32/56
+           Duplicating [1m0.021628931217010275[22m gaussians: [1m11580[22m/[1m535394[22m                               ]8;id=71849;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=623939;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+9400 (313.33%)      35.418 ms            23 h, 56 m, 14 s     41.71 M              73.46 M               23389;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=125710;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+9410 (313.67%)      34.382 ms            23 h, 56 m, 20 s     42.98 M                                    5965;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=439589;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+9420 (314.00%)      33.653 ms            23 h, 56 m, 24 s     43.45 M                                    31737;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=980110;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+9470 (315.67%)      34.301 ms            23 h, 56 m, 19 s     42.72 M                                    29445;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=250280;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+9480 (316.00%)      33.799 ms            23 h, 56 m, 21 s     43.32 M                                    14569;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=479434;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+9490 (316.33%)      34.113 ms            23 h, 56 m, 19 s     42.91 M                                    6066;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=9767;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+9590 (319.67%)      34.027 ms            23 h, 56 m, 16 s     42.96 M                                    6819;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=563750;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:15:54] Splitting [1m0.007719853699407064[22m gaussians: [1m3833[22m/[1m496512[22m                                  ]8;id=365962;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=923653;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.026897637922144883[22m gaussians: [1m13355[22m/[1m496512[22m                               ]8;id=298830;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=165409;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+9690 (323.00%)      34.264 ms            23 h, 56 m, 11 s     42.68 M                                    17212;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=641390;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:15:59] Splitting [1m0.009503731753374564[22m gaussians: [1m4756[22m/[1m500435[22m                                  ]8;id=856795;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=581542;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.030057849670786417[22m gaussians: [1m15042[22m/[1m500435[22m                               ]8;id=984539;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=920782;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+9780 (326.00%)      35.061 ms            23 h, 56 m, 3 s      41.75 M                                    12235;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=778480;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+9790 (326.33%)      35.135 ms            23 h, 56 m, 2 s      41.64 M                                    20861;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=752470;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+9800 (326.67%)      36.370 ms            23 h, 55 m, 53 s     40.37 M              73.93 M               94343;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=276807;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+9890 (329.67%)      36.208 ms            23 h, 55 m, 51 s     40.44 M                                    52273;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=887204;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+[10:16:08] Splitting [1m0.0067663090432132705[22m gaussians: [1m3446[22m/[1m509288[22m                                 ]8;id=290120;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=46228;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#799\799]8;;\
+           Duplicating [1m0.029772937905468026[22m gaussians: [1m15163[22m/[1m509288[22m                               ]8;id=668061;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=274680;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#837\837]8;;\
+
+
+9999 (333.30%)                                                                                           39945;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py\ddim_splatfacto.py]8;;\:]8;id=448462;file:///root/nerfstudio/nerfstudio/models/ddim_splatfacto.py#787\787]8;;\
+╭───────────────────────────────────── [1m🎉 Training Finished 🎉[22m ─────────────────────────────────────╮
+│                        ╷                                                                          │
+│   Config File          │ outputs/cecum_t1_a/ddim_splatfacto/2024-09-09_101316/config.yml          │
+│   Checkpoint Directory │ outputs/cecum_t1_a/ddim_splatfacto/2024-09-09_101316/nerfstudio_models   │
+│                        ╵                                                                          │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────╯
+Printing profiling stats, from longest to shortest duration in seconds
+VanillaPipeline.get_average_eval_image_metrics: [1m1.0625
+DDIMSplatPipeline.get_average_image_metrics: [1m1.0366
+DDIMSplatPipeline.get_eval_image_metrics_and_images: [1m0.1246
+Trainer.train_iteration: [1m0.0246
+DDIMSplatPipeline.get_train_loss_dict: [1m0.0159
+Trainer.eval_iteration: [1m0.0025
