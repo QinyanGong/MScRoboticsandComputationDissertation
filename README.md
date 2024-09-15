@@ -24,16 +24,16 @@ Python = 3.10
 
 #### Dependency:
 Install PyTorch with CUDA (this repo has been tested with CUDA 11.8) and tiny-cuda-nn. cuda-toolkit is required for building tiny-cuda-nn.
-'''ruby
+```ruby
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
-'''
+```
 Pytorch3d is required for SDF regularization.(0.7.7 is used for this repo)
-'''ruby
+```ruby
 pip install pytorch3d
-'''
+```
 
 #### Install [Nerfstudio](https://github.com/nerfstudio-project/nerfstudio) and [gsplat](https://github.com/nerfstudio-project/gsplat) for 3D Gaussian Splatting
 
