@@ -40,10 +40,11 @@ pip install pytorch3d
 #### Code config
 After installing Nerfstudio and gsplat, put ddim_splat_sdf folder files in right places in /Nerfstudio folder:
 
-- put blender_dataparser.py in /nerfstudio/nerfstudio/data/dataparsers/blender_dataparser.py
-- put ddim_splat_trainer.py in /nerfstudio/nerfstudio/engine/ddim_splat_trainer.py
-- put gs_sdf_loss.py in /nerfstudio/nerfstudio/model_components/gs_sdf_loss.py
-- put ddim_splatfacto.py in /nerfstudio/nerfstudio/models/ddim_splatfacto.py
-- put ddim_splat_pipeline.py in /nerfstudio/nerfstudio/pipelines/ddim_splat_pipeline.py
+- replace /nerfstudio/nerfstudio/data/dataparsers/blender_dataparser.py with ddim_splat_sdf/blender_dataparser.py 
+- put ddim_splat_sdf/ddim_splat_trainer.py in /nerfstudio/nerfstudio/engine/
+- put ddim_splat_sdf/gs_sdf_loss.py in /nerfstudio/nerfstudio/model_components/
+- put ddim_splat_sdf/ddim_splatfacto.py in /nerfstudio/nerfstudio/models/
+- put ddim_splat_sdf/ddim_splat_pipeline.py in /nerfstudio/nerfstudio/pipelines/
+- replace nerfstudio/nerfstudio/configs/method_configs.py with method_configs.py
 
 ### [Final Dissertation](High_fidelity_Endoscopic_Image_Synthesis_via_3D_Gaussian_Splatting_and_Diffusion_Implicit_Model_Integration.pdf)
