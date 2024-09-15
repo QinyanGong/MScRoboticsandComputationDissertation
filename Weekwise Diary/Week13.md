@@ -26,13 +26,13 @@
     - add to rendered image
 
 
-
+```
 export CUDA_HOME=/home/wangzican/miniconda3/envs/nerfstudio
 export PATH=$CONDA_PREFIX/bin:/home/wangzican/miniconda3/envs/nerfstudio/lib/stubs:$PATH:/home/wangzican/miniconda3/envs/nerfstudio/lib
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/stubs:$CONDA_PREFIX/lib/python3.9/site-packages:/home/wangzican/miniconda3/envs/nerfstudio/lib
 export PYTHONPATH=$PYTHONPATH:/home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9:/home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9/lib-dynload:\
 /home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9/site-packages
-
+```
 Command to train the ddim_splatfacto model
 
 ```ruby
@@ -66,4 +66,4 @@ ns-eval --load-config /root/outputs/cecum_t1_a/splatfacto/2024-09-09_023806/conf
 &nbsp;
 ----------
 &nbsp;
-> ###### [Next Week](Week14.md)
+> ###### [Conclusion](../High_fidelity_Endoscopic_Image_Synthesis_via_3D_Gaussian_Splatting_and_Diffusion_Implicit_Model_Integration.pdf)
