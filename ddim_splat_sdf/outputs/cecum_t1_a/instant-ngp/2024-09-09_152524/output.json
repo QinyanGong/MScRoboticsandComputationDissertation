@@ -1,0 +1,17 @@
+{
+  "experiment_name": "cecum_t1_a",
+  "method_name": "instant-ngp",
+  "checkpoint": "outputs/cecum_t1_a/instant-ngp/2024-09-09_152524/nerfstudio_models/step-000009999.ckpt",
+  "results": {
+    "psnr": 23.359228134155273,
+    "psnr_std": 1.6643975973129272,
+    "ssim": 0.8032636642456055,
+    "ssim_std": 0.01822897605597973,
+    "lpips": 0.5234647989273071,
+    "lpips_std": 0.04292743653059006,
+    "num_rays_per_sec": 453132.6875,
+    "num_rays_per_sec_std": 34333.53125,
+    "fps": 0.3107905983924866,
+    "fps_std": 0.023548375815153122
+  }
+}

@@ -1,0 +1,233 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.8
+    cli_version: 0.17.8
+    framework: huggingface
+    huggingface_version: 4.29.2
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1725866732
+    t:
+      1:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 55
+      - 71
+      - 83
+      2:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 55
+      - 71
+      - 83
+      3:
+      - 13
+      - 23
+      - 61
+      4: 3.10.8
+      5: 0.17.8
+      6: 4.29.2
+      8:
+      - 5
+      13: linux-x86_64
+_target:
+  desc: null
+  value: nerfstudio.engine.trainer.Trainer
+output_dir:
+  desc: null
+  value: outputs
+method_name:
+  desc: null
+  value: instant-ngp
+experiment_name:
+  desc: null
+  value: cecum_t1_a
+project_name:
+  desc: null
+  value: nerfstudio-project
+timestamp:
+  desc: null
+  value: 2024-09-09_152524
+machine:
+  desc: null
+  value:
+    seed: 42
+    num_devices: 1
+    num_machines: 1
+    machine_rank: 0
+    dist_url: auto
+    device_type: cuda
+logging:
+  desc: null
+  value:
+    relative_log_dir: .
+    steps_per_log: 10
+    max_buffer_size: 20
+    local_writer:
+      _target: nerfstudio.utils.writer.LocalWriter
+      enable: true
+      stats_to_track:
+      - ITER_TRAIN_TIME
+      - TRAIN_RAYS_PER_SEC
+      - CURR_TEST_PSNR
+      - VIS_RAYS_PER_SEC
+      - TEST_RAYS_PER_SEC
+      - ETA
+      max_log_size: 10
+    profiler: basic
+viewer:
+  desc: null
+  value:
+    relative_log_filename: viewer_log_filename.txt
+    websocket_port: null
+    websocket_port_default: 7007
+    websocket_host: 0.0.0.0
+    num_rays_per_chunk: 4096
+    max_num_display_images: 512
+    quit_on_train_completion: false
+    image_format: jpeg
+    jpeg_quality: 75
+    make_share_url: false
+    camera_frustum_scale: 0.1
+    default_composite_depth: true
+pipeline:
+  desc: null
+  value:
+    _target: nerfstudio.pipelines.dynamic_batch.DynamicBatchPipeline
+    datamanager:
+      _target: nerfstudio.data.datamanagers.base_datamanager.VanillaDataManager
+      data: /root/hopodata/c1_a
+      masks_on_gpu: false
+      images_on_gpu: false
+      dataparser:
+        _target: nerfstudio.data.dataparsers.blender_dataparser.Blender
+        data: /root/hopodata/c1_a
+        scale_factor: 1.0
+        alpha_color: white
+        ply_path: null
+      train_num_rays_per_batch: 4096
+      train_num_images_to_sample_from: -1
+      train_num_times_to_repeat_images: -1
+      eval_num_rays_per_batch: 4096
+      eval_num_images_to_sample_from: -1
+      eval_num_times_to_repeat_images: -1
+      eval_image_indices:
+      - 0
+      collate_fn: nerfstudio.data.utils.nerfstudio_collate.nerfstudio_collate
+      camera_res_scale_factor: 1.0
+      patch_size: 1
+      camera_optimizer: null
+      pixel_sampler:
+        _target: nerfstudio.data.pixel_samplers.PixelSampler
+        num_rays_per_batch: 4096
+        keep_full_image: false
+        is_equirectangular: false
+        ignore_mask: false
+        fisheye_crop_radius: null
+        rejection_sample_mask: true
+        max_num_iterations: 100
+    model:
+      _target: nerfstudio.models.instant_ngp.NGPModel
+      enable_collider: false
+      collider_params: null
+      loss_coefficients:
+        rgb_loss_coarse: 1.0
+        rgb_loss_fine: 1.0
+      eval_num_rays_per_chunk: 8192
+      prompt: null
+      grid_resolution: 128
+      grid_levels: 4
+      max_res: 2048
+      log2_hashmap_size: 19
+      alpha_thre: 0.01
+      cone_angle: 0.004
+      render_step_size: 0.005196152210235595
+      near_plane: 0.05
+      far_plane: 1000.0
+      use_gradient_scaling: false
+      use_appearance_embedding: false
+      background_color: random
+      disable_scene_contraction: false
+    target_num_samples: 262144
+    max_num_samples_per_ray: 1024
+optimizers:
+  desc: null
+  value:
+    fields:
+      optimizer:
+        _target: torch.optim.adam.Adam
+        lr: 0.01
+        eps: 1.0e-15
+        max_norm: null
+        weight_decay: 0
+      scheduler:
+        _target: nerfstudio.engine.schedulers.ExponentialDecayScheduler
+        lr_pre_warmup: 1.0e-08
+        lr_final: 0.0001
+        warmup_steps: 0
+        max_steps: 200000
+        ramp: cosine
+vis:
+  desc: null
+  value: wandb
+data:
+  desc: null
+  value: null
+prompt:
+  desc: null
+  value: null
+relative_model_dir:
+  desc: null
+  value: nerfstudio_models
+load_scheduler:
+  desc: null
+  value: true
+steps_per_save:
+  desc: null
+  value: 2000
+steps_per_eval_batch:
+  desc: null
+  value: 500
+steps_per_eval_image:
+  desc: null
+  value: 500
+steps_per_eval_all_images:
+  desc: null
+  value: 25000
+max_num_iterations:
+  desc: null
+  value: 10000
+mixed_precision:
+  desc: null
+  value: true
+use_grad_scaler:
+  desc: null
+  value: false
+save_only_latest_checkpoint:
+  desc: null
+  value: true
+load_dir:
+  desc: null
+  value: null
+load_step:
+  desc: null
+  value: null
+load_config:
+  desc: null
+  value: null
+load_checkpoint:
+  desc: null
+  value: null
+log_gradients:
+  desc: null
+  value: false
+gradient_accumulation_steps:
+  desc: null
+  value: {}
