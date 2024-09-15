@@ -45,3 +45,5 @@ After installing Nerfstudio and gsplat, put ddim_splat_sdf folder files in right
 - put gs_sdf_loss.py in /nerfstudio/nerfstudio/model_components/gs_sdf_loss.py
 - put ddim_splatfacto.py in /nerfstudio/nerfstudio/models/ddim_splatfacto.py
 - put ddim_splat_pipeline.py in /nerfstudio/nerfstudio/pipelines/ddim_splat_pipeline.py
+
+### [Final Dissertation](High_fidelity_Endoscopic_Image_Synthesis_via_3D_Gaussian_Splatting_and_Diffusion_Implicit_Model_Integration.pdf)
