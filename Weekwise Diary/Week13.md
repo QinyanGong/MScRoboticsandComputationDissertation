@@ -26,38 +26,44 @@
     - add to rendered image
 
 
-
+```
 export CUDA_HOME=/home/wangzican/miniconda3/envs/nerfstudio
 export PATH=$CONDA_PREFIX/bin:/home/wangzican/miniconda3/envs/nerfstudio/lib/stubs:$PATH:/home/wangzican/miniconda3/envs/nerfstudio/lib
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/stubs:$CONDA_PREFIX/lib/python3.9/site-packages:/home/wangzican/miniconda3/envs/nerfstudio/lib
 export PYTHONPATH=$PYTHONPATH:/home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9:/home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9/lib-dynload:\
 /home/wangzican/miniconda3/envs/nerfstudio/lib/python3.9/site-packages
-
+```
 Command to train the ddim_splatfacto model
 
-'''
+```ruby
 ns-train ddim_splatfacto --pipeline.model.df-img-output-dir /root/renders/cecum_t1_a/df_gt --max-num-iterations 3000 --experiment-name cecum_t1_a --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models  blender-data --data /root/hopodata/c1_a 
-'''
-'''
+```
+```ruby
 ns-train ddim_splatfacto --max-num-iterations 3000 --experiment-name cecum_t1_a --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models --steps-per-save 1000  blender-data  --data /root/hopodata/c1_a 
-'''
+```
 
 use wandb as viser
-'''
+
+```ruby
 ns-train ddim_splatfacto --max-num-iterations 3000 --experiment-name cecum_t1_a --vis wandb --load-dir /root/outputs/cecum_t1_a/splatfacto/2024-09-07_051834/nerfstudio_models --steps-per-save 1000 blender-data --data /root/hopodata/c1_a
-'''
+```
 
 ![image](https://github.com/user-attachments/assets/f2436f3a-8b83-4111-8cbf-bf594662f825)
 ![image](https://github.com/user-attachments/assets/28570523-2a90-41cc-84bf-814f44b3fcb1)
 
 c1a 0.02 ddim 1e-4 sdf
+
 ![image](https://github.com/user-attachments/assets/4c76eece-b9ab-497a-89d6-b25224cae470)
 
 c1a 0.1 ddim sample 0 sdf
+
 ![image](https://github.com/user-attachments/assets/26f8daed-69a8-4d96-9f4f-eb01895d5465)
 
+```ruby
 ns-eval --load-config /root/outputs/cecum_t1_a/splatfacto/2024-09-09_023806/config.yml --output-path /root/outputs/cecum_t1_a/splatfacto/2024-09-09_023806/output.json
+```
+
 &nbsp;
 ----------
 &nbsp;
-> ###### [Next Week](Week14.md)
+> ###### [Conclusion](../High_fidelity_Endoscopic_Image_Synthesis_via_3D_Gaussian_Splatting_and_Diffusion_Implicit_Model_Integration.pdf)
